@@ -16,7 +16,7 @@ They also hypothesise that taking these differences can remove any noise present
 
 Visual Attention:
 
-
+![image](/assets/images/visual attention.png)
 
 We pass the text through SBERT and the image through resnet 18. These two vectors are multiplied with a weight to get them down to the same dimension.
 
