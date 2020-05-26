@@ -30,6 +30,11 @@ SBERT was chosen to extract features for the text. Why sbert? Why not just pass 
 
 That is because BERT on its own generates poor sentence embeddings. Using the output of the CLS token or adding up all vectors from the last self attention layer is bad practice which is proven in the sbert paper. The sbert paper showed that sentence embeddings from BERT&#39;s CLS tokens perform even worse than Glove embeddings. SBERT fine tunes BERT on Natural language inference tasks to improve sentence embedding quality.
 
+Code:
+The forward propogation looks like so in pytorch.
+
+![image](/assets/images/dnva_forward.png)
+
 Dataset:
 
 The dataset consists of some news, the heading of that news article, an image and whether the news is fake or not. The above model uses only the heading and the image to make predictions. We achieved 0.9 train F1 and 0.87 val F1.
