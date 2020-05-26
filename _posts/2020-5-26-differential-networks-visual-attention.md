@@ -6,4 +6,4 @@ There was a paper published in AAAI 2019 for Visual Question Answering which is 
 
 What are differential networks?
 
-![DN]()
+![DN](assets/images/Screenshot 2020-05-26 at 2.27.25 PM.png)
