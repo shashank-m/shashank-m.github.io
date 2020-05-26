@@ -14,7 +14,7 @@ Assume the image vector is v and text vector is q. They argue that doing a dot p
 
 They also hypothesise that taking these differences can remove any noise present in the features. For example (vi+𝛅) -(vj+𝛅) will remove the noise present in these two elements.
 
-Visual Attention:
+### Visual Attention:
 
 ![image](/assets/images/visual attention.png)
 
@@ -24,22 +24,22 @@ Next these two reshaped features are passed through a differential network respe
 
 Each of these 10 vectors is called an &#39;attention glimpse&#39; which look at different parts of the 196\*512 feature space as shown above. This is kind of similar to multi headed self attention in transformers where each head looks at different parts of the input sequence. It&#39;s just like an ensemble to explore more of the feature space.
 
-SBERT
+### SBERT
 
 SBERT was chosen to extract features for the text. Why sbert? Why not just pass it through BERT and add up all the feature values of each word in the text?
 
 That is because BERT on its own generates poor sentence embeddings. Using the output of the CLS token or adding up all vectors from the last self attention layer is bad practice which is proven in the sbert paper. The sbert paper showed that sentence embeddings from BERT&#39;s CLS tokens perform even worse than Glove embeddings. SBERT fine tunes BERT on Natural language inference tasks to improve sentence embedding quality.
 
-Code:
+### Code:
 The forward propogation looks like so in pytorch.
 
 ![image](/assets/images/dnva_forward.png)
 
-Dataset:
+### Dataset:
 
 The dataset consists of some news, the heading of that news article, an image and whether the news is fake or not. The above model uses only the heading and the image to make predictions. We achieved 0.9 train F1 and 0.87 val F1.
 
-Future work:
+### Future work:
 
 Right now I&#39;m planning on exploring mechanisms like co attention which look at both the text and image while performing attention computations. Will also look forward to incorporating world knowledge using knowledge graphs.
 
