@@ -57,7 +57,7 @@ plugins:
 
 author:
   name   : "Shashank Madhusudhan"
-  avatar : "/assets/images/bio-photo.jpg"
+  avatar : "/assets/images/shaw.jpeg"
   bio    : "Sophomore at Bits Goa. Passionate about deep learning, NLP.Currently exploring multimodal deep learning."
   links:
     - label: "Website"
